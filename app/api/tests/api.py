@@ -140,3 +140,15 @@ class TestCreateEmployeeAPI(APITestCase):
 
         res = self.client.post(reverse("api:create-employee"), data=self.payload, format="json")
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+
+
+class TestGetRestaurantsAPI(APITestCase):
+
+    def setUp(self):
+        self.restaurant = Restaurant.objects.create(name='Burger King', contact_no='+722212132', address='Nairobi')
+
+    def test_get_request_all_restaurants(self):
+
+        res = self.client.get(reverse("api:restaurants"))
+        self.assertEqual(Restaurant.objects.count(), 1)
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
