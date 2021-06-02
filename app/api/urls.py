@@ -5,8 +5,14 @@ app_name = 'api'
 
 
 urlpatterns = [
-    path('register_user/',   RegisterUserAPIView.as_view(), name="register-user"),
-    path('user_login/', UserLoginAPIView.as_view(), name="user-login"),  
-    
-]
+    path('register_user/', RegisterUserAPIView.as_view(), name="register-user"),
+    path('user_login/', UserLoginAPIView.as_view(), name="user-login"),
+    path('create_restaurant/', CreateRestaurantAPIView.as_view(), name="create-restaurant"),
+    path('upload_menu/', UploadMenuAPIView.as_view(), name="upload-menu"),
+    path('create_employee/', CreateEmployeeAPIView.as_view(), name="create-employee"),
+    path('restaurants/', RestaurantListAPIView.as_view(), name="restaurants"),
 
+
+
+
+]
