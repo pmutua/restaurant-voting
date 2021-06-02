@@ -152,3 +152,20 @@ class TestGetRestaurantsAPI(APITestCase):
         res = self.client.get(reverse("api:restaurants"))
         self.assertEqual(Restaurant.objects.count(), 1)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+
+class TestGetCurrentDayMenuListAPI(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
+
+        self.restaurant = Restaurant.objects.create(name='Burger King', contact_no='+722212132', address='Nairobi')
+
+        self.file = SimpleUploadedFile("file.txt", b"abc", content_type="text/plain")
+
+        self.menu = Menu.objects.create(restaurant=self.restaurant, file=self.file, uploaded_by=self.user.username)
+
+    def test_get_request_all_current_day_menu_list(self):
+        res = self.client.get(reverse("api:menu-list"))
+        self.assertEqual(Menu.objects.count(), 1)
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
