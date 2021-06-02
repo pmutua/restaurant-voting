@@ -10,6 +10,9 @@ urlpatterns = [
     path('create_restaurant/', CreateRestaurantAPIView.as_view(), name="create-restaurant"),
     path('upload_menu/', UploadMenuAPIView.as_view(), name="upload-menu"),
     path('create_employee/', CreateEmployeeAPIView.as_view(), name="create-employee"),
+    path('restaurants/', RestaurantListAPIView.as_view(), name="restaurants"),
+
+
 
 
 ]
