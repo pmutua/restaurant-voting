@@ -3,6 +3,7 @@ from django.urls import reverse
 from api.models import *
 from api.custom_jwt import *
 from rest_framework import status
+from django.core.files.uploadedfile import SimpleUploadedFile
 
 
 class TestRegisterUserAPI(APITestCase):
@@ -75,3 +76,27 @@ class TestCreateRestaurantAPI(APITestCase):
         }
         res = self.client.post(reverse("api:create-restaurant"), data=data, format='json')
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+
+
+class TestCreateUploadMenuAPI(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
+        self.payload = jwt_payload_handler(self.user)
+        self.token = jwt_encode_handler(self.payload).decode('UTF-8')
+        self.api_authentication()
+
+        self.restaurant = Restaurant.objects.create(name='Burger King', contact_no='+722212132', address='Nairobi')
+
+        self.file = SimpleUploadedFile("file.txt", b"abc", content_type="text/plain")
+        self.payload = {"file": self.file, 'restaurant': self.restaurant.id}
+
+    def api_authentication(self):
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
+
+    def test_post_request_can_upload_menu(self):
+
+        res = self.client.post(reverse("api:upload-menu"), data=self.payload, format="multipart")
+        print(res.json())
+        r = Menu.objects.all().last()
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED)
