@@ -278,3 +278,44 @@ class CreateEmployeeAPIView(APIView):
 class RestaurantListAPIView(generics.ListAPIView):
     serializer_class = RestaurantListSerializer
     queryset = Restaurant.objects.all()
+
+
+class CurrentDayMenuList(APIView):
+
+    def get(self, request):
+        todays_date = settings.CURRENT_DATE.date()
+
+        qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
+        serializer = MenuListSerializer(qs, many=True)
+        res = {"msg": 'success', "data": serializer.data, "success": True}
+        return Response(data=res, status=status.HTTP_200_OK)
+
+
+class VoteAPIView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, menu_id):
+        username = jwt_decode_handler(request.auth).get('username')
+        todays_date = settings.CURRENT_DATE.date()
+
+        employee = Employee.objects.get(user__username=username)
+        menu = Menu.objects.get(id=menu_id)
+        if Vote.objects.filter(
+                Q(employee__username=username) and
+                Q(voted_at__date=todays_date) and
+                Q(menu__id=menu_id)).exists():
+            res = {"msg": 'You already voted!', "data": None, "success": False}
+            return Response(data=res, status=status.HTTP_200_OK)
+        else:
+            new_vote = Vote.objects.create(
+                employee=employee,
+                menu=menu
+
+            )
+            menu.votes += 1
+            menu.save()
+
+            qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
+            serializer = ResultMenuListSerializer(qs, many=True)
+            res = {"msg": 'You voted successfully!', "data": serializer.data, "success": True}
+            return Response(data=res, status=status.HTTP_200_OK)

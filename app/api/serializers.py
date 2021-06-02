@@ -107,3 +107,52 @@ class UploadMenuSerializer(serializers.ModelSerializer):
 
         ]
         model = Menu
+
+
+class EmployeeSerializer(serializers.ModelSerializer):
+
+    id = serializers.CharField(read_only=True)
+    employee_no = serializers.CharField()
+
+    class Meta:
+        model = User
+        fields = [
+            'id',
+            'employee_no',
+            'first_name',
+            'last_name',
+            'email',
+            'phone',
+            "identification_no",
+            "employee_no"
+
+        ]
+
+
+class RestaurantListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Restaurant
+        fields = '__all__'
+
+
+class MenuListSerializer(serializers.ModelSerializer):
+
+    restaurant = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = Menu
+        fields = '__all__'
+
+
+class ResultMenuListSerializer(serializers.ModelSerializer):
+
+    restaurant = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = Menu
+        fields = [
+            'id',
+            'file',
+            'restaurant',
+            'votes'
+        ]
