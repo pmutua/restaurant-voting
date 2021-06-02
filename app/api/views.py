@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from rest_framework.parsers import (
@@ -272,3 +273,8 @@ class CreateEmployeeAPIView(APIView):
                 return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
         res = {"msg": str(serializer.errors), "data": None, "success": False}
         return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
+
+
+class RestaurantListAPIView(generics.ListAPIView):
+    serializer_class = RestaurantListSerializer
+    queryset = Restaurant.objects.all()
