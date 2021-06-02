@@ -81,7 +81,29 @@ class CreateRestaurantSerializer(serializers.ModelSerializer):
             'name',
             'contact_no',
             'address',
-            'created_by'
+            # 'created_by'
 
         ]
         model = Restaurant
+
+
+class UploadMenuSerializer(serializers.ModelSerializer):
+
+    def create(self, validated_data):
+
+        menu = Menu(
+            file=validated_data['file'],
+            restaurant=validated_data['restaurant'],
+            uploaded_by=validated_data['uploaded_by']
+        )
+        menu.save()
+        return menu
+
+    class Meta:
+        fields = [
+            'restaurant',
+            'file',
+            'uploaded_by'
+
+        ]
+        model = Menu
