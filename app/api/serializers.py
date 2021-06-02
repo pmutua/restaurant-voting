@@ -142,3 +142,17 @@ class MenuListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menu
         fields = '__all__'
+
+
+class ResultMenuListSerializer(serializers.ModelSerializer):
+
+    restaurant = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = Menu
+        fields = [
+            'id',
+            'file',
+            'restaurant',
+            'votes'
+        ]
