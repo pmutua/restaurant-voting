@@ -80,7 +80,8 @@ class CreateRestaurantSerializer(serializers.ModelSerializer):
         fields = [
             'name',
             'contact_no',
-            'address'
+            'address',
             'created_by'
 
         ]
+        model = Restaurant
