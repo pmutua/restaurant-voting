@@ -1,3 +1,4 @@
+from rest_framework import permissions
 from api.models import *
 from api.serializers import *
 
@@ -134,3 +135,20 @@ class UserLoginAPIView(APIView):
         except Exception as e:
             res = {"msg": str(e), "success": False, "data": None}
             return Response(data=res, status=status.HTTP_200_OK)
+
+
+class CreateRestaurantAPIView(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+    def post(self, request, format=None):
+        req = request.data
+        user = {'created_by': jwt_decode_handler(request.auth).get('username')}
+        req = dict(request.data)
+        req.update(user)
+        serializer = CreateRestaurantSerializer(data=req)
+        if serializer.is_valid():
+            serializer.save()
+            res = {"msg": "Restaurant Created", "success": True, "data": serializer.data}
+            return Response(data=res, status=status.HTTP_201_CREATED)
+
+        res = {"msg": str(serializer.errors), "success": False, "data": None}
+        return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
