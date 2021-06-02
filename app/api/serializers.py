@@ -72,3 +72,15 @@ class UserLoginSerializer(serializers.Serializer):
                         {"write_only": True}
                         }
         read_only_fields = ('id',)
+
+
+class CreateRestaurantSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        fields = [
+            'name',
+            'contact_no',
+            'address'
+            'created_by'
+
+        ]
