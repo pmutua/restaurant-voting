@@ -8,6 +8,10 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 
 from django.utils.http import urlencode
 
+import mock
+
+from datetime import timedelta
+
 
 def reverse_querystring(view, urlconf=None, args=None, kwargs=None, current_app=None, query_kwargs=None):
     '''Custom reverse to handle query strings.
@@ -209,3 +213,142 @@ class TestVoteMenuAPI(APITestCase):
 
         self.assertEqual(Vote.objects.count(), 1)
         self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+
+class TestGetResultsAPI(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
+
+        # self.restaurant =
+
+        self.file = SimpleUploadedFile("file.txt", b"abc", content_type="text/plain")
+
+        # self.menu = Menu.objects.create(restaurant=self.restaurant, file=self.file, uploaded_by=self.user.username)
+
+        self.data = [
+            {
+                "votes": 10,
+                "name": 'Burger King'
+            },
+            {
+                "votes": 4,
+                "name": 'Caribean Food Dishes'
+            },
+            {
+                "votes": 8,
+                "name": 'Janet Dishes'
+            }
+
+        ]
+
+        self.restaurant_list = [
+            Restaurant.objects.create(
+                name=item.get('name'),
+                contact_no='+722212132',
+                address='Nairobi') for item in self.data]
+
+        yesterday = datetime.now() - timedelta(days=1)
+
+        yy = yesterday - timedelta(days=1)
+
+        yyy = yy - timedelta(days=1)
+
+        with mock.patch('django.utils.timezone.now') as mock_now:
+            mock_now.return_value = yesterday
+
+            self.menu_list = [
+                Menu.objects.create(
+                    restaurant=restaurant,
+                    uploaded_by=self.user.username,
+                    votes=data.get('votes')) for restaurant,
+                data in zip(
+                    self.restaurant_list,
+                    self.data)]
+
+        with mock.patch('django.utils.timezone.now') as mock_now:
+            mock_now.return_value = yy
+            self.data = [
+                {
+                    "votes": 12,
+                    "name": 'Burger King'
+                },
+                {
+                    "votes": 3,
+                    "name": 'Caribean Food Dishes'
+                },
+                {
+                    "votes": 9,
+                    "name": 'Janet Dishes'
+                }
+
+            ]
+
+            self.menu_list = [
+                Menu.objects.create(
+                    restaurant=restaurant,
+                    uploaded_by=self.user.username,
+                    votes=data.get('votes')) for restaurant,
+                data in zip(
+                    self.restaurant_list,
+                    self.data)]
+
+        with mock.patch('django.utils.timezone.now') as mock_now:
+            mock_now.return_value = yyy
+            self.data = [
+                {
+                    "votes": 10,
+                    "name": 'Burger King'
+                },
+                {
+                    "votes": 7,
+                    "name": 'Caribean Food Dishes'
+                },
+                {
+                    "votes": 6,
+                    "name": 'Janet Dishes'
+                }
+
+            ]
+
+            self.menu_list = [
+                Menu.objects.create(
+                    restaurant=restaurant,
+                    uploaded_by=self.user.username,
+                    votes=data.get('votes')) for restaurant,
+                data in zip(
+                    self.restaurant_list,
+                    self.data)]
+
+        # current day items
+
+        self.data = [
+            {
+                "votes": 10,
+                "name": 'Burger King'
+            },
+            {
+                "votes": 7,
+                "name": 'Caribean Food Dishes'
+            },
+            {
+                "votes": 6,
+                "name": 'Janet Dishes'
+            }
+
+        ]
+
+        self.menu_list = [
+            Menu.objects.create(
+                restaurant=restaurant,
+                uploaded_by=self.user.username,
+                votes=data.get('votes')) for restaurant,
+            data in zip(
+                self.restaurant_list,
+                self.data)]
+
+    def test_get_request_results_if_restaurant_found_won_3_consecutive_days(self):
+        res = self.client.get(reverse("api:results"))
+        expected_resp_data = {'msg': 'success', 'data': [{'rank': 1, 'votes': 7, 'restaurant': 'Caribean Food Dishes'}, {
+            'rank': 2, 'votes': 6, 'restaurant': 'Janet Dishes'}], 'success': True}
+        self.assertEqual(res.json(), expected_resp_data)
