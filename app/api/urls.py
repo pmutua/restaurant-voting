@@ -5,6 +5,7 @@ app_name = 'api'
 
 
 urlpatterns = [
+    path('roles/', RoleListAPIView.as_view(), name="roles"),
     path('register_user/', RegisterUserAPIView.as_view(), name="register-user"),
     path('login/', UserLoginAPIView.as_view(), name="login"),
     path('logout/', UserLogoutView.as_view(), name="logout"),
