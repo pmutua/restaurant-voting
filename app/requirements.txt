@@ -16,3 +16,4 @@ pycodestyle==2.7.0
 autopep8==1.5.7
 flake8
 mock==4.0.3
+psycopg2-binary>=2.8
