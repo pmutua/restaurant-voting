@@ -57,9 +57,34 @@ class TestLoginClientAPI(APITestCase):
             "password": "johnpassword"
 
         }
-        res = self.client.post(reverse("api:user-login"), data=data)
+        res = self.client.post(reverse("api:login"), data=data)
         status = res.json().get('success')
         self.assertEqual(status, True)
+
+
+class TestUserLogOutAPI(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
+        self.payload = jwt_payload_handler(self.user)
+        self.token = jwt_encode_handler(self.payload).decode('UTF-8')
+        self.api_authentication()
+
+    def api_authentication(self):
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
+
+    def test_post_request_user_can_logout(self):
+
+        res = self.client.get(reverse("api:logout"))
+
+        self.assertEqual(res.status_code,status.HTTP_205_RESET_CONTENT)
+
+    def test_post_request_can_logout_unauthenticated(self):
+
+        self.client.force_authenticate(user=None)
+
+        res = self.client.post(reverse("api:logout"))
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
 class TestCreateRestaurantAPI(APITestCase):
