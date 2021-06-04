@@ -6,15 +6,34 @@ admin.site.register(User)
 
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'employee_no', 'user', 'created_at', 'created_by')
+    list_display = (
+        'id',
+        'employee_no',
+        'user',
+        'created_at',
+        'created_by'
+    )
 
 
 class RestaurantAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'contact_no', 'address', 'created_at', 'created_by')
+    list_display = (
+        'id',
+        'name',
+        'contact_no',
+        'address',
+        'created_at',
+        'created_by'
+    )
 
 
 class MenuAdmin(admin.ModelAdmin):
-    list_display = ('id', 'restaurant', 'file', 'votes', 'created_at')
+    list_display = (
+        'id',
+        'restaurant',
+        'file',
+        'votes',
+        'created_at'
+    )
 
 
 class VoteAdmin(admin.ModelAdmin):

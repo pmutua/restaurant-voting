@@ -35,7 +35,6 @@ from .custom_jwt import (
 todays_date = settings.CURRENT_DATE.date()
 
 
-
 class RoleListAPIView(generics.ListAPIView):
     serializer_class = RoleSerializer
     queryset = Role.objects.all()
@@ -79,11 +78,13 @@ class RegisterUserAPIView(APIView):
                     'user_email': new_user.email
                 }
 
-                client_html_message = loader.render_to_string('api/email-user-creds.html')
+                client_html_message = loader.render_to_string(
+                    'api/email-user-creds.html')
 
                 client_message_string = strip_tags(client_html_message)
 
-                client_html_content = loader.render_to_string('api/email-user-creds.html', ctx)
+                client_html_content = loader.render_to_string(
+                    'api/email-user-creds.html', ctx)
 
                 client_message = {
                     "html": client_html_content,
@@ -99,9 +100,9 @@ class RegisterUserAPIView(APIView):
                 )
 
                 ser = UserDetailSerializer(new_user)
-
+                text = 'Check your email for login information'
                 res = {
-                    "msg": "You have successfully registered. Check your email for login information",
+                    "msg": f"Successfully registered.{text}",
                     "data": ser.data,
                     "success": True}
                 return Response(data=res, status=status.HTTP_201_CREATED)
@@ -126,7 +127,8 @@ class UserLoginAPIView(APIView):
                 token = jwt_encode_handler(payload)
 
                 user.save()
-                roles = [{"id": role.id, "name": role.name} for role in user.roles.all()]
+                roles = [{"id": role.id, "name": role.name}
+                         for role in user.roles.all()]
                 fullname = user.first_name + " " + user.last_name
                 res = {
                     "msg": "Login success",
@@ -140,7 +142,10 @@ class UserLoginAPIView(APIView):
                 return Response(data=res, status=status.HTTP_200_OK)
 
             else:
-                res = {"msg": "Invalid login credentials", "data": None, "success": False}
+                res = {
+                    "msg": "Invalid login credentials",
+                    "data": None,
+                    "success": False}
                 return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             res = {"msg": str(e), "success": False, "data": None}
@@ -156,8 +161,11 @@ class UserLogoutView(APIView):
             user = User.objects.get(username=username)
             payload = jwt_payload_handler(user)
             jwt_encode_handler(payload)
-            res = {"msg": "User logged out successfully", "success": True, "data": None}
-            return Response(data=res,status=status.HTTP_205_RESET_CONTENT)
+            res = {
+                "msg": "User logged out successfully",
+                "success": True,
+                "data": None}
+            return Response(data=res, status=status.HTTP_205_RESET_CONTENT)
         except Exception as e:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
@@ -173,7 +181,10 @@ class CreateRestaurantAPIView(APIView):
         serializer = CreateRestaurantSerializer(data=req)
         if serializer.is_valid():
             serializer.save()
-            res = {"msg": "Restaurant Created", "success": True, "data": serializer.data}
+            res = {
+                "msg": "Restaurant Created",
+                "success": True,
+                "data": serializer.data}
             return Response(data=res, status=status.HTTP_201_CREATED)
 
         res = {"msg": str(serializer.errors), "success": False, "data": None}
@@ -188,13 +199,14 @@ class UploadMenuAPIView(APIView):
         try:
             req = request.data.dict()
             todays_date = settings.CURRENT_DATE.date()
-            menu = Menu.objects.filter(Q(restaurant__id=int(req.get('restaurant')))
-                                       and Q(created_at__date__iexact=todays_date))
+            menu = Menu.objects.filter(
+                Q(restaurant__id=int(req.get('restaurant')))
+                and Q(created_at__date__iexact=todays_date))
             user = jwt_decode_handler(request.auth).get('username')
 
             if menu.exists():
                 res = {
-                    "msg": "Menu already added.You can add another one tommorrow or update the exsting one that was created today.",
+                    "msg": "Menu already added.",
                     "success": False,
                     "data": None}
                 return Response(data=res, status=status.HTTP_200_OK)
@@ -203,10 +215,17 @@ class UploadMenuAPIView(APIView):
 
             if serializer.is_valid():
                 serializer.save(uploaded_by=user)
-                res = {"msg": "Menu uploaded", "success": True, "data": serializer.data}
+                res = {
+                    "msg": "Menu uploaded",
+                    "success": True,
+                    "data": serializer.data}
                 return Response(data=res, status=status.HTTP_201_CREATED)
 
-            res = {"msg": str(serializer.errors), "success": False, "data": None}
+            res = {
+                "msg": str(
+                    serializer.errors),
+                "success": False,
+                "data": None}
             return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             res = {"msg": str(e), "success": False, "data": None}
@@ -224,8 +243,12 @@ class CreateEmployeeAPIView(APIView):
         employee = Employee.objects.filter(
             Q(employee_no=employee_no)
         )
+        text = f"EMPLOYEE NO { employee_no } already exists"
         if employee.exists():
-            res = {"msg": f"Employee with EMPLOYEE NO { employee_no } already exists", "data": None, "success": False}
+            res = {
+                "msg": text,
+                "data": None,
+                "success": False}
             return Response(data=res, status=status.HTTP_400_BAD_REQUEST)
 
         role_group, _ = Role.objects.get_or_create(name=req.get('employee'))
@@ -268,11 +291,13 @@ class CreateEmployeeAPIView(APIView):
                     'user_email': new_user.email
                 }
 
-                client_html_message = loader.render_to_string('api/email-user-creds.html')
+                client_html_message = loader.render_to_string(
+                    'api/email-user-creds.html')
 
                 client_message_string = strip_tags(client_html_message)
 
-                client_html_content = loader.render_to_string('api/email-user-creds.html', ctx)
+                client_html_content = loader.render_to_string(
+                    'api/email-user-creds.html', ctx)
 
                 client_message = {
                     "html": client_html_content,
@@ -286,9 +311,9 @@ class CreateEmployeeAPIView(APIView):
                     client_message,
                     new_user.email
                 )
-
+                text = "Login info sent to employee's email"
                 res = {
-                    "msg": "Employee successfully created. Login information has been sent to employee's email",
+                    "msg": f"Employee successfully created.{text}",
                     "data": serializer.data,
                     "success": True}
                 return Response(data=res, status=status.HTTP_201_CREATED)
@@ -342,7 +367,10 @@ class VoteAPIView(APIView):
 
             qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
             serializer = ResultMenuListSerializer(qs, many=True)
-            res = {"msg": 'You voted successfully!', "data": serializer.data, "success": True}
+            res = {
+                "msg": 'You voted successfully!',
+                "data": serializer.data,
+                "success": True}
             return Response(data=res, status=status.HTTP_200_OK)
 
 
@@ -354,10 +382,14 @@ class ResultsAPIView(APIView):
 
         start = today - timedelta(days=today.weekday())
 
-        current_menu_qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date)).order_by('-votes')
+        current_menu_qs = Menu.objects.filter(
+            Q(created_at__date__iexact=todays_date)).order_by('-votes')
 
         if len(current_menu_qs) == 0:
-            res = {"msg": 'Results not found! no menus found for today.', "data": None, "success": False}
+            res = {
+                "msg": 'Results not found! no menus found for today.',
+                "data": None,
+                "success": False}
             return Response(data=res, status=status.HTTP_200_OK)
 
         # Populate menu list from monday to today.
@@ -387,18 +419,22 @@ class ResultsAPIView(APIView):
                 )
             )
 
-            result = [{"rank": item.rank, "restaurant": item.restaurant.name, "votes": item.votes}
-                      for item in new_queryset]
+            result = [{"rank": item.rank,
+                       "restaurant": item.restaurant.name,
+                       "votes": item.votes} for item in new_queryset]
 
             res = {"msg": 'success', "data": result, "success": True}
             return Response(data=res, status=status.HTTP_200_OK)
 
         elif max(date_ints) - min(date_ints) == 3:
             # If consecutive winner found 3 times
-            list_ = [item for item in consecutive_list if item.get('day') == str(todays_date)]
+            list_ = [item for item in consecutive_list if item.get(
+                'day') == str(todays_date)]
             current_max = list_[0]
             current_max_pk = current_max.get('id')
-            new_current_list = [item.id for item in current_menu_qs if item.id != current_max_pk]
+            new_current_list = [
+                item.id for item in current_menu_qs
+                if item.id != current_max_pk]
 
             new_queryset = Menu.objects.filter(id__in=new_current_list
                                                ).annotate(
@@ -408,8 +444,14 @@ class ResultsAPIView(APIView):
                 )
             )
 
-            result = [{"rank": item.rank, "votes": item.votes, "restaurant": item.restaurant.name}
-                      for item in new_queryset]
+            result = [
+                {
+                    "rank": item.rank,
+                    "votes": item.votes,
+                    "restaurant": item.restaurant.name
+                }
+                for item in new_queryset
+            ]
 
             res = {"msg": 'success', "data": result, "success": True}
             return Response(data=res, status=status.HTTP_200_OK)
