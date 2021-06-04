@@ -33,7 +33,6 @@ class UserSerializer(serializers.ModelSerializer):
             'email',
             'phone',
             "identification_no"
-
         ]
 
 
@@ -154,5 +153,6 @@ class ResultMenuListSerializer(serializers.ModelSerializer):
             'id',
             'file',
             'restaurant',
-            'votes'
+            'votes',
+            'created_at'
         ]
