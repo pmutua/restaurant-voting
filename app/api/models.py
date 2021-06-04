@@ -1,7 +1,6 @@
 import uuid
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models.deletion import CASCADE
 
 
 class Role(models.Model):
@@ -11,16 +10,20 @@ class Role(models.Model):
         blank=True,
         null=True)
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return self.name
 
 
 class User(AbstractUser):
     """Represents user class model"""
-    id = models.CharField(max_length=100,
-                          unique=True,
-                          default=uuid.uuid4,
-                          primary_key=True)
+    id = models.CharField(
+        max_length=100,
+        unique=True,
+        default=uuid.uuid4,
+        primary_key=True)
     roles = models.ManyToManyField(Role, blank=True)
     org_id = models.IntegerField(null=True, blank=True)
     phone = models.CharField(max_length=15, null=True, blank=True)
@@ -28,6 +31,9 @@ class User(AbstractUser):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_by = models.CharField(max_length=50, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
@@ -48,6 +54,12 @@ class Employee(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_by = models.CharField(max_length=50, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+    def __str__(self):
+        return f'{self.user.first_name} {self.user.last_name}'
 
 
 class Restaurant(models.Model):
@@ -81,11 +93,18 @@ class Menu(models.Model):
     uploaded_by = models.CharField(max_length=50, null=True, blank=True)
     votes = models.IntegerField(default=0)
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
-        return self.restaurant.name + f' {self.votes} VOTES'
+        return self.restaurant.name
 
 class Vote(models.Model):
+    """Represents vote class model"""
     employee = models.ForeignKey(Employee,on_delete=models.CASCADE)
     menu = models.ForeignKey(Menu,on_delete=models.CASCADE)
     voted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.employee}'
 
