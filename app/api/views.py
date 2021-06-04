@@ -35,6 +35,12 @@ from .custom_jwt import (
 todays_date = settings.CURRENT_DATE.date()
 
 
+
+class RoleListAPIView(generics.ListAPIView):
+    serializer_class = RoleSerializer
+    queryset = Role.objects.all()
+
+
 class RegisterUserAPIView(APIView):
     def post(self, request, format=None):
         req = request.data
