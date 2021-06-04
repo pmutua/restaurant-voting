@@ -10,8 +10,6 @@ This is a REST API for voting restaurant menus.
 
 Uses the default Django development server.
 
-1. Rename **.env.dev-sample** to **.env.dev**
-
 1. Update the environment variables in the **docker-compose.yml** and **.env.dev** files.
 
 2. Build the images and run the containers:
