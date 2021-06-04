@@ -24,6 +24,18 @@ def reverse_querystring(view, urlconf=None, args=None, kwargs=None, current_app=
     return base_url
 
 
+class TestRolesAPI(APITestCase):
+
+    def setUp(self):
+        self.role = Role.objects.create(name='admin')
+
+    def test_get_request_get_all_roles(self):
+
+        res = self.client.get(reverse("api:roles"))
+        self.assertEqual(Role.objects.count(), 1)
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+
 class TestRegisterUserAPI(APITestCase):
     def test_post_request_can_register_new_user(self):
 
@@ -77,7 +89,7 @@ class TestUserLogOutAPI(APITestCase):
 
         res = self.client.get(reverse("api:logout"))
 
-        self.assertEqual(res.status_code,status.HTTP_205_RESET_CONTENT)
+        self.assertEqual(res.status_code, status.HTTP_205_RESET_CONTENT)
 
     def test_post_request_can_logout_unauthenticated(self):
 
@@ -245,11 +257,7 @@ class TestGetResultsAPI(APITestCase):
     def setUp(self):
         self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
 
-        # self.restaurant =
-
         self.file = SimpleUploadedFile("file.txt", b"abc", content_type="text/plain")
-
-        # self.menu = Menu.objects.create(restaurant=self.restaurant, file=self.file, uploaded_by=self.user.username)
 
         self.data = [
             {
@@ -373,7 +381,15 @@ class TestGetResultsAPI(APITestCase):
                 self.data)]
 
     def test_get_request_results_if_restaurant_found_won_3_consecutive_days(self):
+
         res = self.client.get(reverse("api:results"))
-        expected_resp_data = {'msg': 'success', 'data': [{'rank': 1, 'votes': 7, 'restaurant': 'Caribean Food Dishes'}, {
-            'rank': 2, 'votes': 6, 'restaurant': 'Janet Dishes'}], 'success': True}
-        self.assertEqual(res.json(), expected_resp_data)
+
+        expected_response_data = {
+            'msg': 'success',
+            'data': [
+                {'rank': 2, 'votes': 6, 'restaurant': 'Janet Dishes'},
+                {'rank': 1, 'votes': 7, 'restaurant': 'Caribean Food Dishes'}
+            ],
+            'success': True}
+
+        self.assertEqual(res.json(), expected_response_data)
