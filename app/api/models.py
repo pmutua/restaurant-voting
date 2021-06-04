@@ -86,7 +86,11 @@ class Restaurant(models.Model):
 
 class Menu(models.Model):
     """Represents menu class model"""
-    restaurant = models.ForeignKey(Restaurant,null=True,blank=True,on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(
+        Restaurant,
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE)
     file = models.FileField(upload_to='menus/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -99,12 +103,12 @@ class Menu(models.Model):
     def __str__(self):
         return self.restaurant.name
 
+
 class Vote(models.Model):
     """Represents vote class model"""
-    employee = models.ForeignKey(Employee,on_delete=models.CASCADE)
-    menu = models.ForeignKey(Menu,on_delete=models.CASCADE)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
     voted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.employee}'
-
