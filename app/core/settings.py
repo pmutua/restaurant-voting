@@ -15,15 +15,11 @@ import os
 from decouple import config
 
 
-
-
-
-CURRENT_DATE  = datetime.datetime.now()
+CURRENT_DATE = datetime.datetime.now()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,7 +33,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_ALLOW_ALL = True 
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -67,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -97,7 +93,7 @@ JWT_AUTH = {
 
     'JWT_DECODE_HANDLER':
     'api.custom_jwt.jwt_decode_handler',
-    
+
 
     'JWT_PAYLOAD_HANDLER':
     'api.custom_jwt.jwt_payload_handler',
@@ -135,7 +131,7 @@ REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        
+
     ),
 
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
@@ -145,13 +141,12 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE':100,
+    'PAGE_SIZE': 100,
     'DEFAULT_RENDERER_CLASSESS': (
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
 }
-
 
 
 DATABASES = {
@@ -213,8 +208,6 @@ USE_TZ = False
 # SRC: https://devcenter.heroku.com/articles/django-assets
 
 
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
@@ -227,12 +220,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        'file':{
+        'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': './logs/debug.log',
@@ -242,13 +234,13 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers':['file'],
+            'handlers': ['file'],
             'level': 'DEBUG'
         }
 
     },
     'formatters': {
-        'simpleRe':{
+        'simpleRe': {
             'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
             'style': '{',
         }
@@ -256,3 +248,9 @@ LOGGING = {
 
 }
 
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
