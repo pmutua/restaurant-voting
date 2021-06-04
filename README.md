@@ -10,7 +10,30 @@ This is a REST API for voting restaurant menus.
 
 Uses the default Django development server.
 
-1. Update the environment variables in the **docker-compose.yml** and **.env.dev** files.
+1. Update the environment variables in the **docker-compose.yml** and **.env.dev**.
+
+**.env.dev** Example
+
+
+
+```
+    DEBUG=1
+    SECRET_KEY=foo
+    DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+    SQL_ENGINE=django.db.backends.postgresql
+    SQL_DATABASE=postgres
+    SQL_USER=postgres
+    SQL_PASSWORD=postgres
+    SQL_HOST=db
+    SQL_PORT=5432
+    DATABASE=postgres
+    EMAIL_HOST_USER=<Add sndgrid host user Here>
+    EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
+    LOGIN_REDIRECT_URL=<Add login redirect Here>
+    CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
+    CLOUDINARY_API_KEY=<Add Cloudinary API Key Here>
+    CLOUDINARY_API_SECRET=<Add Cloudinary API Secret Here>
+```
 
 2. Build the images and run the containers:
 
@@ -24,6 +47,36 @@ Uses the default Django development server.
 Uses **gunicorn** and  **nginx**.
 
 1. Update the environment variables in **.env.prod** and **.env.prod.db**
+
+
+**.env.prod** Example
+```
+    DEBUG=0
+    SECRET_KEY=foo
+    DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+    SQL_ENGINE=django.db.backends.postgresql
+    SQL_DATABASE=postgres
+    SQL_USER=postgres
+    SQL_PASSWORD=postgres
+    SQL_HOST=db
+    SQL_PORT=5432
+    DATABASE=postgres
+    EMAIL_HOST_USER=<Add sndgrid host user Here>
+    EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
+    LOGIN_REDIRECT_URL=<Add login redirect Here>
+    CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
+    CLOUDINARY_API_KEY=<Add Cloudinary API Key Here>
+    CLOUDINARY_API_SECRET=<Add Cloudinary API Secret Here>
+```
+
+
+
+**.env.prod.db** Example
+```
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+```
 
 2. Build the images and run the containers:
 
