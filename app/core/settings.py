@@ -16,6 +16,9 @@ from decouple import config
 
 
 
+
+
+CURRENT_DATE  = datetime.datetime.now()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
@@ -200,7 +203,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -223,4 +226,33 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file':{
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': './logs/debug.log',
+            'formatter': 'simpleRe',
+        }
+
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'level': 'DEBUG'
+        }
+
+    },
+    'formatters': {
+        'simpleRe':{
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        }
+    }
+
+}
 
