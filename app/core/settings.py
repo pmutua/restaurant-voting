@@ -18,7 +18,6 @@ from decouple import config
 CURRENT_DATE = datetime.datetime.now()
 
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -150,14 +149,12 @@ REST_FRAMEWORK = {
 }
 
 
-
-
 DATABASES = {
     "default": {
         "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
-        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
-        "USER": os.environ.get("SQL_USER", "user"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
+        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")), "USER": os.environ.get(
+        "SQL_USER", "user"), "PASSWORD": os.environ.get(
+        "SQL_PASSWORD", "password"),
         "HOST": os.environ.get("SQL_HOST", "localhost"),
         "PORT": os.environ.get("SQL_PORT", "5432"),
     }
@@ -251,15 +248,15 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 
-LOGIN_REDIRECT_URL= os.environ.get("LOGIN_REDIRECT_URL")
+LOGIN_REDIRECT_URL = os.environ.get("LOGIN_REDIRECT_URL")
 
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get("CLOUDINARY_CLOUD_NAME"), 
-    'API_KEY': os.environ.get("CLOUDINARY_API_KEY"), 
-    'API_SECRET': os.environ.get("CLOUDINARY_API_SECRET"), 
+    'CLOUD_NAME': os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    'API_KEY': os.environ.get("CLOUDINARY_API_KEY"),
+    'API_SECRET': os.environ.get("CLOUDINARY_API_SECRET"),
 }
 
-FILE_UPLOAD_MAX_MEMORY_SIZE = 26242880 
+FILE_UPLOAD_MAX_MEMORY_SIZE = 26242880
