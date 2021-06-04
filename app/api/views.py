@@ -1,35 +1,38 @@
+from datetime import datetime
+from datetime import date, timedelta
+
+from django.conf import settings
+from django.template import loader
+from django.utils.html import strip_tags
+from django.contrib.auth.hashers import check_password
+from django.db.models import Q
+from django.db.models import Sum, Max
+from django.db import connection
+from django.db.models import F, Window
+from django.db.models.functions import Rank
+
 from rest_framework import permissions
-from api.models import *
-from api.serializers import *
-
 from rest_framework.views import APIView
-
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, AllowAny
-
-from rest_framework.parsers import (
-    MultiPartParser,
-    FormParser
-)
-
-
-from django.db.models import Q
-
-from django.conf import settings
+# from rest_framework.parsers import (
+#     MultiPartParser,
+#     FormParser
+# )
 
 from .tasks import *
-
-from django.template import loader
-from django.utils.html import strip_tags
-from django.contrib.auth.hashers import check_password
-
+from api.models import *
+from api.serializers import *
 from .custom_jwt import (
     jwt_payload_handler,
     jwt_encode_handler,
     jwt_decode_handler
 )
+
+
+todays_date = settings.CURRENT_DATE.date()
 
 
 class RegisterUserAPIView(APIView):
@@ -300,10 +303,11 @@ class VoteAPIView(APIView):
 
         employee = Employee.objects.get(user__username=username)
         menu = Menu.objects.get(id=menu_id)
+
         if Vote.objects.filter(
-                Q(employee__username=username) and
-                Q(voted_at__date=todays_date) and
-                Q(menu__id=menu_id)).exists():
+                employee__user__username=username,
+                voted_at__date=todays_date,
+                menu__id=menu_id).exists():
             res = {"msg": 'You already voted!', "data": None, "success": False}
             return Response(data=res, status=status.HTTP_200_OK)
         else:
@@ -318,4 +322,92 @@ class VoteAPIView(APIView):
             qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
             serializer = ResultMenuListSerializer(qs, many=True)
             res = {"msg": 'You voted successfully!', "data": serializer.data, "success": True}
+            return Response(data=res, status=status.HTTP_200_OK)
+
+
+class ResultsAPIView(APIView):
+
+    def get(self, request):
+
+        today = date.today()
+
+        start = today - timedelta(days=today.weekday())
+
+        current_menu_qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date)).order_by('-votes')
+
+        if len(current_menu_qs) == 0:
+            res = {"msg": 'Results not found! no menus found for today.', "data": None, "success": False}
+            return Response(data=res, status=status.HTTP_200_OK)
+
+        # Populate menu list from monday to today.
+        consecutive_list = Menu.objects.filter(
+            created_at__gte=start
+        ).extra(select={
+                'day': connection.ops.date_trunc_sql(
+                    'day',
+                    'created_at')}
+                ).values('day', 'id').annotate(max_vote=Max('votes'))
+
+        # populate consecutive Days
+        date_strs = [date.get('day') for date in consecutive_list]
+
+        dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+
+        date_ints = set([d.toordinal() for d in dates])
+
+        if len(date_ints) == 1:
+            # If all unique
+
+            new_queryset = Menu.objects.filter(
+                created_at__date__iexact=todays_date).annotate(
+                rank=Window(
+                    expression=Rank(),
+                    order_by=F('votes').desc(),
+                )
+            )
+
+            result = [{"rank": item.rank, "restaurant": item.restaurant.name, "votes": item.votes}
+                      for item in new_queryset]
+
+            res = {"msg": 'success', "data": result, "success": True}
+            return Response(data=res, status=status.HTTP_200_OK)
+
+        elif max(date_ints) - min(date_ints) == 3:
+            # If consecutive winner found 3 times
+            list_ = [item for item in consecutive_list if item.get('day') == str(todays_date)]
+            current_max = list_[0]
+            current_max_pk = current_max.get('id')
+            new_current_list = [item.id for item in current_menu_qs if item.id != current_max_pk]
+
+            new_queryset = Menu.objects.filter(id__in=new_current_list
+                                               ).annotate(
+                rank=Window(
+                    expression=Rank(),
+                    order_by=F('votes').desc(),
+                )
+            )
+
+            result = [{"rank": item.rank, "votes": item.votes, "restaurant": item.restaurant.name}
+                      for item in new_queryset]
+
+            res = {"msg": 'success', "data": result, "success": True}
+            return Response(data=res, status=status.HTTP_200_OK)
+
+        else:
+            # print("not consecutive")
+            new_queryset = Menu.objects.filter(
+                created_at__date__iexact=todays_date
+            ).annotate(
+                rank=Window(
+                    expression=Rank(),
+                    order_by=F('votes').desc(),
+                )
+            )
+
+            result = [{"rank": item.rank,
+                       "votes": item.votes,
+                       "restaurant": item.restaurant.name,
+                       "file": item.file.url} for item in new_queryset]
+
+            res = {"msg": 'success', "data": result, "success": True}
             return Response(data=res, status=status.HTTP_200_OK)

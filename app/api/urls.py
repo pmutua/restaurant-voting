@@ -13,6 +13,9 @@ urlpatterns = [
     path('restaurants/', RestaurantListAPIView.as_view(), name="restaurants"),
     path('menu_list/', CurrentDayMenuList.as_view(), name="menu-list"),
     path('vote/<int:menu_id>/', VoteAPIView.as_view(), name="new-vote"),
+    path('results/', ResultsAPIView.as_view(), name="results"),
+
+    
 
 
 
