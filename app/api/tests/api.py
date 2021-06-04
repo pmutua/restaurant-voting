@@ -13,15 +13,16 @@ import mock
 from datetime import timedelta
 
 
-def reverse_querystring(view, urlconf=None, args=None, kwargs=None, current_app=None, query_kwargs=None):
-    '''Custom reverse to handle query strings.
-    Usage:
-        reverse('app.views.my_view', kwargs={'pk': 123}, query_kwargs={'search': 'Bob'})
-    '''
-    base_url = reverse(view, urlconf=urlconf, args=args, kwargs=kwargs, current_app=current_app)
-    if query_kwargs:
-        return '{}?{}'.format(base_url, urlencode(query_kwargs))
-    return base_url
+class TestRolesAPI(APITestCase):
+
+    def setUp(self):
+        self.role = Role.objects.create(name='admin')
+
+    def test_get_request_get_all_roles(self):
+
+        res = self.client.get(reverse("api:roles"))
+        self.assertEqual(Role.objects.count(), 1)
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
 
 
 class TestRegisterUserAPI(APITestCase):
@@ -57,9 +58,34 @@ class TestLoginClientAPI(APITestCase):
             "password": "johnpassword"
 
         }
-        res = self.client.post(reverse("api:user-login"), data=data)
+        res = self.client.post(reverse("api:login"), data=data)
         status = res.json().get('success')
         self.assertEqual(status, True)
+
+
+class TestUserLogOutAPI(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
+        self.payload = jwt_payload_handler(self.user)
+        self.token = jwt_encode_handler(self.payload).decode('UTF-8')
+        self.api_authentication()
+
+    def api_authentication(self):
+        self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + self.token)
+
+    def test_post_request_user_can_logout(self):
+
+        res = self.client.get(reverse("api:logout"))
+
+        self.assertEqual(res.status_code, status.HTTP_205_RESET_CONTENT)
+
+    def test_post_request_can_logout_unauthenticated(self):
+
+        self.client.force_authenticate(user=None)
+
+        res = self.client.post(reverse("api:logout"))
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
 class TestCreateRestaurantAPI(APITestCase):
@@ -220,11 +246,7 @@ class TestGetResultsAPI(APITestCase):
     def setUp(self):
         self.user = User.objects.create_superuser('admin', 'admin@admin.com', 'admin123')
 
-        # self.restaurant =
-
         self.file = SimpleUploadedFile("file.txt", b"abc", content_type="text/plain")
-
-        # self.menu = Menu.objects.create(restaurant=self.restaurant, file=self.file, uploaded_by=self.user.username)
 
         self.data = [
             {
@@ -348,7 +370,15 @@ class TestGetResultsAPI(APITestCase):
                 self.data)]
 
     def test_get_request_results_if_restaurant_found_won_3_consecutive_days(self):
+
         res = self.client.get(reverse("api:results"))
-        expected_resp_data = {'msg': 'success', 'data': [{'rank': 1, 'votes': 7, 'restaurant': 'Caribean Food Dishes'}, {
-            'rank': 2, 'votes': 6, 'restaurant': 'Janet Dishes'}], 'success': True}
-        self.assertEqual(res.json(), expected_resp_data)
+
+        expected_response_data = {
+            'msg': 'success',
+            'data': [
+                {'rank': 2, 'votes': 6, 'restaurant': 'Janet Dishes'},
+                {'rank': 1, 'votes': 7, 'restaurant': 'Caribean Food Dishes'}
+            ],
+            'success': True}
+
+        self.assertEqual(res.json(), expected_response_data)
