@@ -27,7 +27,6 @@ Uses the default Django development server.
     SQL_HOST=db
     SQL_PORT=5432
     DATABASE=postgres
-    EMAIL_HOST_USER=<Add sndgrid host user Here>
     EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
     LOGIN_REDIRECT_URL=<Add login redirect Here>
     CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
@@ -61,7 +60,6 @@ Uses **gunicorn** and  **nginx**.
     SQL_HOST=db
     SQL_PORT=5432
     DATABASE=postgres
-    EMAIL_HOST_USER=<Add sndgrid host user Here>
     EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
     LOGIN_REDIRECT_URL=<Add login redirect Here>
     CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
@@ -85,6 +83,10 @@ POSTGRES_DB=postgres
     Test it out at http://localhost:1337. No mounted folders. To apply changes, the image must be re-built.
 
 
+The API has been intergrated with third party services namely:
+
+1. Sendgrid - Handles Emailing [Check out here how to intergrate sendgrid with Django](https://sendgrid.com/docs/for-developers/sending-email/django/)
+2. Cloudinary - Handles File Storage [Check oout here how to intergrate Cloudinary with Django](https://cloudinary.com/documentation/django_integration)
 
 ## API Features
 
@@ -152,8 +154,6 @@ The API responds with JSON data by default.
 Request GET /api/results/
 
 curl -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" https://localhost:8000/api/results/
-
-
 
 
 
