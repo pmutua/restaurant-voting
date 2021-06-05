@@ -365,7 +365,7 @@ class VoteAPIView(APIView):
             menu.votes += 1
             menu.save()
 
-            qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
+            qs = Menu.objects.filter(Q(created_at__date=todays_date))
             serializer = ResultMenuListSerializer(qs, many=True)
             res = {
                 "msg": 'You voted successfully!',
