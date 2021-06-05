@@ -27,7 +27,6 @@ Uses the default Django development server.
     SQL_HOST=db
     SQL_PORT=5432
     DATABASE=postgres
-    EMAIL_HOST_USER=<Add sndgrid host user Here>
     EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
     LOGIN_REDIRECT_URL=<Add login redirect Here>
     CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
@@ -39,7 +38,21 @@ Uses the default Django development server.
 
     `$ docker-compose up -d --build`
 
-    Test it out at http://localhost:8000. The "app" folder is mounted into the container and your code changes apply automatically.
+
+3. Create migrations and apply them into database. NOTE the containers must be running: 
+
+    `$ docker-compose exec web python manage.py makemigrations`
+    `$ docker-compose exec web python manage.py migrate`
+
+
+4. Test it out at http://localhost:8000. The "app" folder is mounted into the container and your code changes apply automatically.
+
+#### Running Tests in Development 
+
+`$ docker-compose exec web python manage.py test`
+    
+NOTE: Before you execute the command above. The containers must me up an running.
+    
 
 
 ### Production
@@ -61,7 +74,6 @@ Uses **gunicorn** and  **nginx**.
     SQL_HOST=db
     SQL_PORT=5432
     DATABASE=postgres
-    EMAIL_HOST_USER=<Add sndgrid host user Here>
     EMAIL_HOST_PASSWORD=<Add sndgrid email host Here>
     LOGIN_REDIRECT_URL=<Add login redirect Here>
     CLOUDINARY_CLOUD_NAME=<Add Cloudinary Name Here>
@@ -82,9 +94,16 @@ POSTGRES_DB=postgres
 
     `$ docker-compose -f docker-compose.prod.yml up -d --build`
     
+    
     Test it out at http://localhost:1337. No mounted folders. To apply changes, the image must be re-built.
 
+    $ docker-compose -f docker-compose.prod.yml down -v
 
+
+The API has been intergrated with third party services namely:
+
+1. Sendgrid - Handles Emailing [Check out here how to intergrate sendgrid with Django](https://sendgrid.com/docs/for-developers/sending-email/django/)
+2. Cloudinary - Handles File Storage [Check oout here how to intergrate Cloudinary with Django](https://cloudinary.com/documentation/django_integration)
 
 ## API Features
 
@@ -123,6 +142,8 @@ POSTGRES_DB=postgres
 
 ## API Endpoints
 
+You can view the full [Postman Collection Here.](https://www.getpostman.com/collections/f11cb32c01901cee1a4c)
+
 Some endpoints require a token for authentication. The API call should have the token in Authorization header.
 
     `{'Authorization': 'Bearer': <token>}`
@@ -152,8 +173,6 @@ The API responds with JSON data by default.
 Request GET /api/results/
 
 curl -H "Authorization: Bearer <your_token>" -H "Content-Type: application/json" https://localhost:8000/api/results/
-
-
 
 
 

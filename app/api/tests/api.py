@@ -1,16 +1,26 @@
-from rest_framework.test import APITestCase
+
+from datetime import timedelta
 from django.urls import reverse
-from api.models import *
-from api.custom_jwt import *
-from rest_framework import status
 from django.core.files.uploadedfile import SimpleUploadedFile
 
+from api.models import (
+    Role,
+    User,
+    Employee,
+    Restaurant,
+    Menu,
+    Vote
 
-from django.utils.http import urlencode
+)
+
+from api.custom_jwt import *
+
+from rest_framework import status
+from rest_framework.test import APITestCase
 
 import mock
 
-from datetime import timedelta
+
 
 
 class TestRolesAPI(APITestCase):
