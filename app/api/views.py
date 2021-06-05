@@ -383,7 +383,7 @@ class ResultsAPIView(APIView):
         start = today - timedelta(days=today.weekday())
 
         current_menu_qs = Menu.objects.filter(
-            Q(created_at__date__iexact=todays_date)).order_by('-votes')
+            Q(created_at__date=todays_date)).order_by('-votes')
 
         if len(current_menu_qs) == 0:
             res = {
@@ -412,7 +412,7 @@ class ResultsAPIView(APIView):
             # If all unique
 
             new_queryset = Menu.objects.filter(
-                created_at__date__iexact=todays_date).annotate(
+                created_at__date=todays_date).annotate(
                 rank=Window(
                     expression=Rank(),
                     order_by=F('votes').desc(),
@@ -459,7 +459,7 @@ class ResultsAPIView(APIView):
         else:
             # print("not consecutive")
             new_queryset = Menu.objects.filter(
-                created_at__date__iexact=todays_date
+                created_at__date=todays_date
             ).annotate(
                 rank=Window(
                     expression=Rank(),
