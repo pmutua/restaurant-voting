@@ -38,8 +38,21 @@ Uses the default Django development server.
 
     `$ docker-compose up -d --build`
 
-    Test it out at http://localhost:8000. The "app" folder is mounted into the container and your code changes apply automatically.
 
+3. Create migrations and apply them into database. NOTE the containers must be running: 
+
+    `$ docker-compose exec web python manage.py makemigrations`
+    `$ docker-compose exec web python manage.py migrate`
+
+
+4. Test it out at http://localhost:8000. The "app" folder is mounted into the container and your code changes apply automatically.
+
+#### Running Tests in Development 
+
+`$ docker-compose exec web python manage.py test`
+    
+NOTE: Before you execute the command above. The containers must me up an running.
+    
 
 
 ### Production
