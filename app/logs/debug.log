@@ -1,0 +1,988 @@
+INFO 2021-06-04 09:26:09,716 autoreload 24324 140066466965312 Watching for file changes with StatReloader
+INFO 2021-06-04 09:26:11,859 basehttp 24324 140066332604160 "GET /api/results/ HTTP/1.1" 200 82
+INFO 2021-06-04 09:27:49,252 autoreload 24324 140066466965312 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:27:49,611 autoreload 24392 139765125359424 Watching for file changes with StatReloader
+INFO 2021-06-04 09:27:53,987 autoreload 24392 139765125359424 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:27:54,453 autoreload 24401 140576581826368 Watching for file changes with StatReloader
+INFO 2021-06-04 09:27:57,860 autoreload 24401 140576581826368 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:27:58,182 autoreload 24416 140333075064640 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:01,517 autoreload 24416 140333075064640 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:01,905 autoreload 24429 140366511781696 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:06,367 autoreload 24429 140366511781696 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:06,705 autoreload 24438 140665186748224 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:24,562 autoreload 24438 140665186748224 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:24,931 autoreload 24450 140101027206976 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:30,396 autoreload 24450 140101027206976 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:30,770 autoreload 24459 139761239775040 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:45,339 autoreload 24459 139761239775040 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:45,708 autoreload 24471 140493107349312 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:46,980 autoreload 24471 140493107349312 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:47,319 autoreload 24474 140049064744768 Watching for file changes with StatReloader
+INFO 2021-06-04 09:28:52,685 autoreload 24474 140049064744768 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:28:53,006 autoreload 24483 139996004919104 Watching for file changes with StatReloader
+INFO 2021-06-04 09:29:37,599 autoreload 24483 139996004919104 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:29:37,955 autoreload 24510 140233659795264 Watching for file changes with StatReloader
+INFO 2021-06-04 09:29:50,523 autoreload 24510 140233659795264 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:29:50,849 autoreload 24520 140315461461824 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:27,052 autoreload 24520 140315461461824 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:27,364 autoreload 24540 139875404326720 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:30,683 autoreload 24540 139875404326720 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:31,065 autoreload 24549 140522775447360 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:32,342 autoreload 24549 140522775447360 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:32,632 autoreload 24553 140047058507584 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:42,102 autoreload 24553 140047058507584 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:42,454 autoreload 24571 140020532451136 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:44,780 autoreload 24571 140020532451136 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:45,256 autoreload 24584 140270656354112 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:47,542 autoreload 24584 140270656354112 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:47,867 autoreload 24589 140287402719040 Watching for file changes with StatReloader
+INFO 2021-06-04 09:30:49,114 autoreload 24589 140287402719040 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:30:49,442 autoreload 24598 140335556147008 Watching for file changes with StatReloader
+WARNING 2021-06-04 09:31:56,337 log 24598 140335495616256 Bad Request: /api/register_user/
+WARNING 2021-06-04 09:31:56,338 basehttp 24598 140335495616256 "POST /api/register_user/ HTTP/1.1" 400 68
+INFO 2021-06-04 09:34:11,979 autoreload 24598 140335556147008 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:12,457 autoreload 24718 140240903235392 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:14,970 autoreload 24718 140240903235392 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:15,434 autoreload 24731 139957731559232 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:16,828 autoreload 24731 139957731559232 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:17,252 autoreload 24734 140211309549376 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:21,825 autoreload 24734 140211309549376 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:22,376 autoreload 24747 140057192646464 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:23,830 autoreload 24747 140057192646464 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:24,279 autoreload 24751 139892988229440 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:26,825 autoreload 24751 139892988229440 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:27,246 autoreload 24762 139800448325440 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:41,135 autoreload 24762 139800448325440 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:41,580 autoreload 24781 140214550263616 Watching for file changes with StatReloader
+INFO 2021-06-04 09:34:47,092 autoreload 24781 140214550263616 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:34:47,623 autoreload 24794 140691058530112 Watching for file changes with StatReloader
+INFO 2021-06-04 09:35:37,534 autoreload 24794 140691058530112 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:35:37,932 autoreload 24830 139741841205056 Watching for file changes with StatReloader
+INFO 2021-06-04 09:35:43,354 autoreload 24830 139741841205056 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:35:43,751 autoreload 24842 140131294910272 Watching for file changes with StatReloader
+INFO 2021-06-04 09:35:50,210 autoreload 24842 140131294910272 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:35:50,667 autoreload 24852 140449418499904 Watching for file changes with StatReloader
+INFO 2021-06-04 09:35:58,314 autoreload 24852 140449418499904 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:35:58,737 autoreload 24869 140102325667648 Watching for file changes with StatReloader
+INFO 2021-06-04 09:36:23,968 autoreload 24869 140102325667648 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:36:24,667 autoreload 24887 139830123390784 Watching for file changes with StatReloader
+INFO 2021-06-04 09:37:02,483 autoreload 24887 139830123390784 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:37:03,235 autoreload 24958 140310963021632 Watching for file changes with StatReloader
+INFO 2021-06-04 09:39:03,872 autoreload 24958 140310963021632 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:39:04,309 autoreload 25092 140691527526208 Watching for file changes with StatReloader
+INFO 2021-06-04 09:39:10,910 autoreload 25092 140691527526208 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:39:11,390 autoreload 25103 140432147932992 Watching for file changes with StatReloader
+INFO 2021-06-04 09:39:37,550 autoreload 25103 140432147932992 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:39:38,102 autoreload 25130 140665646122816 Watching for file changes with StatReloader
+INFO 2021-06-04 09:39:40,814 autoreload 25130 140665646122816 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:39:41,430 autoreload 25140 140381149988672 Watching for file changes with StatReloader
+INFO 2021-06-04 09:39:49,037 autoreload 25140 140381149988672 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:39:49,493 autoreload 25151 140265535309632 Watching for file changes with StatReloader
+INFO 2021-06-04 09:41:11,337 autoreload 25151 140265535309632 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:41:11,808 autoreload 25241 140564281165632 Watching for file changes with StatReloader
+INFO 2021-06-04 09:41:13,168 autoreload 25241 140564281165632 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:41:13,555 autoreload 25245 140490683676480 Watching for file changes with StatReloader
+INFO 2021-06-04 09:41:16,088 autoreload 25245 140490683676480 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:41:16,943 autoreload 25254 140535807801152 Watching for file changes with StatReloader
+INFO 2021-06-04 09:42:08,360 autoreload 25254 140535807801152 /home/pegasus/Projects/restaurant/app/api/tasks.py changed, reloading.
+INFO 2021-06-04 09:42:08,758 autoreload 25315 140540795807552 Watching for file changes with StatReloader
+INFO 2021-06-04 09:43:27,104 autoreload 25315 140540795807552 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:43:27,521 autoreload 25402 139889233577792 Watching for file changes with StatReloader
+INFO 2021-06-04 09:43:31,873 autoreload 25402 139889233577792 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:43:32,345 autoreload 25419 139982168508224 Watching for file changes with StatReloader
+INFO 2021-06-04 09:43:37,878 autoreload 25419 139982168508224 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:43:38,301 autoreload 25428 139852835194688 Watching for file changes with StatReloader
+INFO 2021-06-04 09:44:07,822 autoreload 25428 139852835194688 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+INFO 2021-06-04 09:44:08,266 autoreload 25458 139631365785408 Watching for file changes with StatReloader
+INFO 2021-06-04 09:48:39,604 basehttp 25458 139631305254656 "POST /api/register_user/ HTTP/1.1" 201 338
+INFO 2021-06-04 10:00:39,458 autoreload 25458 139631365785408 /home/pegasus/Projects/restaurant/app/core/settings.py changed, reloading.
+WARNING 2021-06-04 10:26:39,860 log 27900 139730787309376 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:26:40,096 log 27900 139730787309376 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:26:47,041 log 27900 139730787309376 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:28:54,311 log 28065 140226103822144 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:28:54,547 log 28065 140226103822144 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:28:56,604 log 28065 140226103822144 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:31:43,328 log 28211 140698960451392 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:31:43,562 log 28211 140698960451392 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:31:46,194 log 28211 140698960451392 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:31:47,600 log 28211 140698960451392 Unauthorized: /api/logout/
+INFO 2021-06-04 10:38:55,700 autoreload 28847 140438996080448 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:04,376 basehttp 28847 140438935811840 "GET /admin/ HTTP/1.1" 200 8405
+INFO 2021-06-04 10:39:04,518 basehttp 28847 140438935811840 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,519 basehttp 28847 140438853908224 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,533 basehttp 28847 140438853908224 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,590 basehttp 28847 140438853908224 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,591 basehttp 28847 140438935811840 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,640 basehttp 28847 140438935811840 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,714 basehttp 28847 140438935811840 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,720 basehttp 28847 140438935811840 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,725 basehttp 28847 140438935811840 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:04,804 basehttp 28847 140438853908224 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2021-06-04 10:39:04,804 basehttp 28847 140438845515520 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2021-06-04 10:39:04,805 basehttp 28847 140438935811840 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+WARNING 2021-06-04 10:39:04,971 log 28847 140438845515520 Not Found: /favicon.ico
+WARNING 2021-06-04 10:39:04,974 basehttp 28847 140438845515520 "GET /favicon.ico HTTP/1.1" 404 2200
+INFO 2021-06-04 10:39:06,510 basehttp 28847 140438845515520 "GET /admin/api/employee/ HTTP/1.1" 200 7959
+INFO 2021-06-04 10:39:06,608 basehttp 28847 140438837122816 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,616 basehttp 28847 140438837122816 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,620 basehttp 28847 140438837122816 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,624 basehttp 28847 140438837122816 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,636 basehttp 28847 140438828730112 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,649 basehttp 28847 140438828730112 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,664 basehttp 28847 140438845515520 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+INFO 2021-06-04 10:39:06,671 basehttp 28847 140438853908224 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:39:06,673 basehttp 28847 140438935811840 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2021-06-04 10:39:06,684 basehttp 28847 140438853908224 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:06,742 basehttp 28847 140438853908224 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2021-06-04 10:39:15,746 basehttp 28847 140438853908224 "GET /admin/api/vote/ HTTP/1.1" 200 8108
+INFO 2021-06-04 10:39:15,805 basehttp 28847 140438853908224 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:39:26,782 autoreload 28847 140438996080448 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:27,235 autoreload 28910 139996175165248 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:30,660 autoreload 28910 139996175165248 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:31,001 autoreload 28920 140605542119232 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:42,552 autoreload 28920 140605542119232 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:42,938 autoreload 28942 140628776142656 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:48,284 autoreload 28942 140628776142656 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:48,605 autoreload 28955 140614290437952 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:51,884 autoreload 28955 140614290437952 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:52,198 autoreload 28964 140693545207616 Watching for file changes with StatReloader
+INFO 2021-06-04 10:39:59,533 autoreload 28964 140693545207616 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:39:59,864 autoreload 28978 140265129428800 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:02,147 autoreload 28978 140265129428800 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:02,487 autoreload 28988 140625623242560 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:04,835 autoreload 28988 140625623242560 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:05,227 autoreload 28993 139679368116032 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:09,627 autoreload 28993 139679368116032 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:09,976 autoreload 29003 139806557415232 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:11,320 autoreload 29003 139806557415232 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:11,675 autoreload 29013 139630889924416 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:14,041 autoreload 29013 139630889924416 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:14,558 autoreload 29017 140222589425472 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:16,793 basehttp 29017 140222528894720 "GET /admin/api/vote/ HTTP/1.1" 200 8108
+INFO 2021-06-04 10:40:16,879 basehttp 29017 140222528894720 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:40:19,302 basehttp 29017 140222528894720 "GET /admin/api/vote/ HTTP/1.1" 200 8108
+INFO 2021-06-04 10:40:19,346 basehttp 29017 140222528894720 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:40:34,541 autoreload 29017 140222589425472 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:40:35,092 autoreload 29046 140411631040320 Watching for file changes with StatReloader
+INFO 2021-06-04 10:40:35,646 basehttp 29046 140411571033856 "GET /admin/api/vote/ HTTP/1.1" 200 9496
+INFO 2021-06-04 10:40:35,707 basehttp 29046 140411571033856 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:40:59,957 autoreload 29046 140411631040320 /home/pegasus/Projects/restaurant/app/api/models.py changed, reloading.
+INFO 2021-06-04 10:41:00,328 autoreload 29078 139751882766144 Watching for file changes with StatReloader
+INFO 2021-06-04 10:41:03,873 basehttp 29078 139751822235392 "GET /admin/api/vote/ HTTP/1.1" 200 9448
+INFO 2021-06-04 10:41:03,934 basehttp 29078 139751822235392 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:41:13,208 basehttp 29078 139751822235392 "GET /admin/api/menu/ HTTP/1.1" 200 10442
+INFO 2021-06-04 10:41:13,247 basehttp 29078 139751822235392 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:41:15,183 basehttp 29078 139751822235392 "GET /admin/api/restaurant/ HTTP/1.1" 200 7575
+INFO 2021-06-04 10:41:15,227 basehttp 29078 139751822235392 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:41:30,733 autoreload 29078 139751882766144 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:41:31,079 autoreload 29121 139628400576320 Watching for file changes with StatReloader
+INFO 2021-06-04 10:41:34,400 autoreload 29121 139628400576320 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:41:34,716 autoreload 29132 140581670786880 Watching for file changes with StatReloader
+INFO 2021-06-04 10:41:40,209 autoreload 29132 140581670786880 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:41:40,517 autoreload 29144 140548549056320 Watching for file changes with StatReloader
+INFO 2021-06-04 10:41:49,044 autoreload 29144 140548549056320 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:41:49,359 autoreload 29156 140371643123520 Watching for file changes with StatReloader
+INFO 2021-06-04 10:41:52,637 autoreload 29156 140371643123520 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:41:52,972 autoreload 29166 139876318250816 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:04,659 autoreload 29166 139876318250816 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:05,058 autoreload 29185 140612818757440 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:10,345 autoreload 29185 140612818757440 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:10,641 autoreload 29198 140508227839808 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:15,941 autoreload 29198 140508227839808 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:16,237 autoreload 29210 140318945625920 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:23,587 autoreload 29210 140318945625920 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:23,995 autoreload 29220 140018971617088 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:25,259 autoreload 29220 140018971617088 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:25,578 autoreload 29229 140576567310144 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:33,990 autoreload 29229 140576567310144 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:34,352 autoreload 29243 140010767415104 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:39,739 autoreload 29243 140010767415104 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:40,172 autoreload 29255 140268128397120 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:52,912 autoreload 29255 140268128397120 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:42:53,250 autoreload 29268 140527104730944 Watching for file changes with StatReloader
+INFO 2021-06-04 10:42:57,600 basehttp 29268 140527044200192 "GET /admin/api/restaurant/ HTTP/1.1" 200 9229
+INFO 2021-06-04 10:42:57,690 basehttp 29268 140527044200192 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:42:57,780 basehttp 29268 140527044200192 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2021-06-04 10:43:10,063 autoreload 29268 140527104730944 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:10,376 autoreload 29780 139983003313984 Watching for file changes with StatReloader
+INFO 2021-06-04 10:43:13,501 basehttp 29780 139982942783232 "GET /admin/api/menu/ HTTP/1.1" 200 10442
+INFO 2021-06-04 10:43:13,567 basehttp 29780 139982942783232 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:43:15,414 basehttp 29780 139982942783232 "GET /admin/api/employee/ HTTP/1.1" 200 7959
+INFO 2021-06-04 10:43:15,467 basehttp 29780 139982942783232 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+INFO 2021-06-04 10:43:40,477 autoreload 29780 139983003313984 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:41,300 autoreload 30034 140187367561024 Watching for file changes with StatReloader
+INFO 2021-06-04 10:43:44,769 autoreload 30034 140187367561024 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:45,134 autoreload 30219 139909418846016 Watching for file changes with StatReloader
+INFO 2021-06-04 10:43:46,523 autoreload 30219 139909418846016 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:46,878 autoreload 30235 139767697712960 Watching for file changes with StatReloader
+INFO 2021-06-04 10:43:49,198 autoreload 30235 139767697712960 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:49,612 autoreload 30263 140378504734528 Watching for file changes with StatReloader
+INFO 2021-06-04 10:43:59,443 autoreload 30263 140378504734528 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:43:59,799 autoreload 30292 140228668311360 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:05,132 autoreload 30292 140228668311360 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:05,529 autoreload 30302 140273921759040 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:14,922 autoreload 30302 140273921759040 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:15,243 autoreload 30312 140040149501760 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:22,581 autoreload 30312 140040149501760 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:23,037 autoreload 30325 139964301014848 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:30,498 autoreload 30325 139964301014848 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:30,923 autoreload 30346 139629870909248 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:34,293 autoreload 30346 139629870909248 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:34,665 autoreload 30351 140375625307968 Watching for file changes with StatReloader
+INFO 2021-06-04 10:44:38,015 autoreload 30351 140375625307968 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:44:38,399 autoreload 30361 140481817749312 Watching for file changes with StatReloader
+INFO 2021-06-04 10:45:00,195 autoreload 30361 140481817749312 /home/pegasus/Projects/restaurant/app/api/admin.py changed, reloading.
+INFO 2021-06-04 10:45:00,561 autoreload 30401 140478035306304 Watching for file changes with StatReloader
+INFO 2021-06-04 10:45:02,450 basehttp 30401 140477907597056 "GET /admin/api/employee/ HTTP/1.1" 200 9600
+INFO 2021-06-04 10:45:02,526 basehttp 30401 140477907597056 "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+WARNING 2021-06-04 10:56:47,654 log 31216 140355971499840 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:56:47,889 log 31216 140355971499840 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:56:52,132 log 31216 140355971499840 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:56:53,844 log 31216 140355971499840 Unauthorized: /api/logout/
+WARNING 2021-06-04 10:58:04,972 log 31269 140297445607232 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:58:05,207 log 31269 140297445607232 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:58:07,194 log 31269 140297445607232 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:58:08,957 log 31269 140297445607232 Unauthorized: /api/logout/
+WARNING 2021-06-04 10:58:35,010 log 31304 139692904523584 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:58:35,244 log 31304 139692904523584 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:58:37,573 log 31304 139692904523584 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:58:38,708 log 31304 139692904523584 Method Not Allowed: /api/roles/
+WARNING 2021-06-04 10:58:38,832 log 31304 139692904523584 Unauthorized: /api/logout/
+WARNING 2021-06-04 10:59:03,047 log 31332 140354074576704 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 10:59:03,284 log 31332 140354074576704 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 10:59:07,430 log 31332 140354074576704 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 10:59:08,816 log 31332 140354074576704 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:00:51,349 log 31556 139697631557440 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:00:51,584 log 31556 139697631557440 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:00:51,707 log 31556 139697631557440 Bad Request: /api/upload_menu/
+WARNING 2021-06-04 11:00:51,826 log 31556 139697631557440 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:00:52,719 log 31556 139697631557440 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:02:02,345 log 31787 140546013472576 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:02:02,579 log 31787 140546013472576 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:02:02,742 log 31787 140546013472576 Bad Request: /api/upload_menu/
+WARNING 2021-06-04 11:02:02,859 log 31787 140546013472576 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:02:03,589 log 31787 140546013472576 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:04:55,537 log 32045 140716559468352 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:04:55,785 log 32045 140716559468352 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:04:57,746 log 32045 140716559468352 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:04:59,191 log 32045 140716559468352 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:05:40,289 log 32105 139667069044544 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:05:40,523 log 32105 139667069044544 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:05:42,830 log 32105 139667069044544 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:05:44,240 log 32105 139667069044544 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:06:24,641 log 32183 140630326032192 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:06:24,875 log 32183 140630326032192 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:06:26,943 log 32183 140630326032192 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:06:29,207 log 32183 140630326032192 Unauthorized: /api/logout/
+WARNING 2021-06-04 11:07:27,285 log 32358 140665736050496 Unauthorized: /api/create_employee/
+WARNING 2021-06-04 11:07:27,523 log 32358 140665736050496 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-04 11:07:29,515 log 32358 140665736050496 Unauthorized: /api/upload_menu/
+WARNING 2021-06-04 11:07:31,653 log 32358 140665736050496 Unauthorized: /api/logout/
+INFO 2021-06-04 17:51:53,873 autoreload 13 139883872405312 Watching for file changes with StatReloader
+INFO 2021-06-04 17:52:45,787 autoreload 13 139961733019456 Watching for file changes with StatReloader
+INFO 2021-06-04 17:53:34,180 basehttp 13 139961566226176 "GET /admin/ HTTP/1.1" 302 0
+INFO 2021-06-04 17:53:34,263 basehttp 13 139961566226176 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2223
+INFO 2021-06-04 17:53:34,304 basehttp 13 139961566226176 "GET /staticfiles/admin/css/base.css HTTP/1.1" 200 16307
+INFO 2021-06-04 17:53:34,309 basehttp 13 139961556784896 "GET /staticfiles/admin/css/login.css HTTP/1.1" 200 1185
+INFO 2021-06-04 17:53:34,309 basehttp 13 139961574618880 "GET /staticfiles/admin/css/nav_sidebar.css HTTP/1.1" 200 2138
+INFO 2021-06-04 17:53:34,312 basehttp 13 139961548392192 "GET /staticfiles/admin/css/responsive.css HTTP/1.1" 200 18344
+INFO 2021-06-04 17:53:34,338 basehttp 13 139961548392192 "GET /staticfiles/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+INFO 2021-06-04 17:53:34,341 basehttp 13 139961574618880 "GET /staticfiles/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2021-06-04 17:53:34,413 basehttp 13 139961574618880 "GET /staticfiles/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2021-06-04 17:53:34,418 basehttp 13 139961548392192 "GET /staticfiles/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2021-06-04 17:53:38,049 basehttp 13 139961548392192 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2384
+INFO 2021-06-04 17:53:38,141 basehttp 13 139961548392192 "GET /staticfiles/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2021-06-04 17:56:01,319 autoreload 13 139961733019456 /usr/src/app/core/settings.py changed, reloading.
+INFO 2021-06-04 17:56:02,543 autoreload 20 140711565117248 Watching for file changes with StatReloader
+INFO 2021-06-04 17:56:10,368 autoreload 20 140711565117248 /usr/src/app/core/settings.py changed, reloading.
+INFO 2021-06-04 17:56:11,210 autoreload 23 140180773353280 Watching for file changes with StatReloader
+INFO 2021-06-05 09:38:31,773 autoreload 11 140041206957888 Watching for file changes with StatReloader
+WARNING 2021-06-05 09:40:49,237 log 11 140041032562432 Bad Request: /api/register_user/
+WARNING 2021-06-05 09:40:49,241 basehttp 11 140041032562432 "POST /api/register_user/ HTTP/1.1" 400 275
+INFO 2021-06-05 09:43:14,842 autoreload 9 140708979005248 Watching for file changes with StatReloader
+INFO 2021-06-05 09:43:47,332 basehttp 9 140708879353600 "POST /api/register_user/ HTTP/1.1" 201 324
+INFO 2021-06-05 09:44:44,782 basehttp 9 140708879353600 "POST /api/login/ HTTP/1.1" 200 73
+INFO 2021-06-05 09:44:49,498 basehttp 9 140708879353600 "POST /api/login/ HTTP/1.1" 200 531
+INFO 2021-06-05 09:45:34,609 basehttp 9 140708879353600 "POST /api/create_employee/ HTTP/1.1" 201 271
+INFO 2021-06-05 09:50:19,987 autoreload 9 140417626744640 Watching for file changes with StatReloader
+WARNING 2021-06-05 09:50:46,411 log 12 140052647925568 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 09:50:46,659 log 12 140052647925568 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 09:50:46,786 log 12 140052647925568 Bad Request: /api/upload_menu/
+WARNING 2021-06-05 09:50:46,911 log 12 140052647925568 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 09:50:48,829 log 12 140052647925568 Internal Server Error: /api/menu_list/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 339, in get
+    res = {"msg": 'success', "data": serializer.data, "success": True}
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+ERROR 2021-06-05 09:50:49,093 log 12 140052647925568 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 388, in get
+    if len(current_menu_qs) == 0:
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+WARNING 2021-06-05 09:50:49,620 log 12 140052647925568 Unauthorized: /api/logout/
+ERROR 2021-06-05 09:50:50,482 log 12 140052647925568 Internal Server Error: /api/vote/14/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 372, in get
+    "data": serializer.data,
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO 2021-06-05 09:51:56,200 basehttp 9 140417527269120 "POST /api/create_restaurant/ HTTP/1.1" 201 119
+WARNING 2021-06-05 09:52:05,052 log 9 140417527269120 Bad Request: /api/upload_menu/
+WARNING 2021-06-05 09:52:05,055 basehttp 9 140417527269120 "POST /api/upload_menu/ HTTP/1.1" 400 325
+INFO 2021-06-05 09:54:19,076 autoreload 9 140417626744640 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 09:54:21,133 autoreload 22 140708491085632 Watching for file changes with StatReloader
+INFO 2021-06-05 09:54:30,786 basehttp 22 140708391503616 "POST /api/upload_menu/ HTTP/1.1" 201 201
+WARNING 2021-06-05 09:57:28,877 log 27 139716622731072 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 09:57:29,128 log 27 139716622731072 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 09:57:30,894 log 27 139716622731072 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 09:57:32,378 log 27 139716622731072 Internal Server Error: /api/menu_list/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 339, in get
+    res = {"msg": 'success', "data": serializer.data, "success": True}
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+ERROR 2021-06-05 09:57:32,529 log 27 139716622731072 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 388, in get
+    if len(current_menu_qs) == 0:
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 269, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+WARNING 2021-06-05 09:57:33,052 log 27 139716622731072 Unauthorized: /api/logout/
+ERROR 2021-06-05 09:57:33,752 log 27 139716622731072 Internal Server Error: /api/vote/15/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 372, in get
+    "data": serializer.data,
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+WARNING 2021-06-05 09:57:50,975 log 22 140708391503616 Unauthorized: /api/restaurants/
+WARNING 2021-06-05 09:57:50,976 basehttp 22 140708391503616 "GET /api/restaurants/ HTTP/1.1" 401 35
+INFO 2021-06-05 09:58:07,253 basehttp 22 140708391503616 "GET /api/restaurants/ HTTP/1.1" 200 229
+ERROR 2021-06-05 09:58:23,351 log 22 140708391503616 Internal Server Error: /api/menu_list/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 339, in get
+    res = {"msg": 'success', "data": serializer.data, "success": True}
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function upper(date) does not exist
+LINE 1: ...RE UPPER(("api_menu"."created_at")::date::text) = UPPER('202...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+ERROR 2021-06-05 09:58:23,353 basehttp 22 140708391503616 "GET /api/menu_list/ HTTP/1.1" 500 158473
+INFO 2021-06-05 09:59:08,973 autoreload 22 140708491085632 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 09:59:10,657 autoreload 35 139779745834816 Watching for file changes with StatReloader
+INFO 2021-06-05 09:59:15,693 basehttp 35 139779576428288 "GET /api/menu_list/ HTTP/1.1" 200 310
+INFO 2021-06-05 10:00:28,149 autoreload 35 139779745834816 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:00:29,034 autoreload 40 140002732746560 Watching for file changes with StatReloader
+INFO 2021-06-05 10:00:48,271 autoreload 40 140002732746560 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:00:49,212 autoreload 43 140010906163008 Watching for file changes with StatReloader
+INFO 2021-06-05 10:00:55,930 autoreload 43 140010906163008 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:00:56,965 autoreload 46 140220582336320 Watching for file changes with StatReloader
+INFO 2021-06-05 10:01:05,678 autoreload 46 140220582336320 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:01:06,577 autoreload 49 139637087487808 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:01:35,034 log 52 140572433356608 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:01:35,295 log 52 140572433356608 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:01:37,081 log 52 140572433356608 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:01:37,957 log 52 140572433356608 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 407, in get
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+  File "/usr/src/app/api/views.py", line 407, in <listcomp>
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+WARNING 2021-06-05 10:01:38,485 log 52 140572433356608 Unauthorized: /api/logout/
+INFO 2021-06-05 10:02:47,118 autoreload 49 139637087487808 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:02:48,003 autoreload 59 140683521943360 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:03:01,856 log 62 139791177135936 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:03:02,110 log 62 139791177135936 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:03:05,772 log 62 139791177135936 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:03:06,586 log 62 139791177135936 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 407, in get
+    dates = [datetime.strptime(str(d), "%Y-%m-%d") for d in date_strs]
+  File "/usr/src/app/api/views.py", line 407, in <listcomp>
+    dates = [datetime.strptime(str(d), "%Y-%m-%d") for d in date_strs]
+  File "/usr/local/lib/python3.6/_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.6/_strptime.py", line 365, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  00:00:00
+WARNING 2021-06-05 10:03:07,136 log 62 139791177135936 Unauthorized: /api/logout/
+INFO 2021-06-05 10:03:22,160 autoreload 59 140683521943360 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:03:23,001 autoreload 69 140687352026944 Watching for file changes with StatReloader
+INFO 2021-06-05 10:04:30,167 autoreload 69 140687352026944 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:04:31,442 autoreload 72 139810104358720 Watching for file changes with StatReloader
+INFO 2021-06-05 10:04:33,987 autoreload 72 139810104358720 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:04:35,000 autoreload 75 139979855824704 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:04:45,044 log 78 140142607402816 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:04:45,294 log 78 140142607402816 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:04:47,310 log 78 140142607402816 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:04:48,529 log 78 140142607402816 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 408, in get
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+  File "/usr/src/app/api/views.py", line 408, in <listcomp>
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+WARNING 2021-06-05 10:04:49,064 log 78 140142607402816 Unauthorized: /api/logout/
+INFO 2021-06-05 10:05:11,736 autoreload 75 139979855824704 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:05:12,600 autoreload 85 140262432376640 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:05:23,815 log 88 140699520485184 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:05:24,066 log 88 140699520485184 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:05:25,783 log 88 140699520485184 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:05:26,591 log 88 140699520485184 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 408, in get
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+  File "/usr/src/app/api/views.py", line 408, in <listcomp>
+    dates = [datetime.strptime(d, "%Y-%m-%d") for d in date_strs]
+  File "/usr/local/lib/python3.6/_strptime.py", line 565, in _strptime_datetime
+    tt, fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.6/_strptime.py", line 365, in _strptime
+    data_string[found.end():])
+ValueError: unconverted data remains:  00:00:00
+WARNING 2021-06-05 10:05:27,120 log 88 140699520485184 Unauthorized: /api/logout/
+INFO 2021-06-05 10:06:16,167 autoreload 85 140262432376640 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:06:17,019 autoreload 97 140125606364992 Watching for file changes with StatReloader
+INFO 2021-06-05 10:06:19,497 autoreload 97 140125606364992 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:06:20,516 autoreload 100 140190749058880 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:06:30,030 log 103 140320305547072 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:06:30,282 log 103 140320305547072 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:06:31,953 log 103 140320305547072 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:06:32,994 log 103 140320305547072 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 434, in get
+    current_max = list_[0]
+IndexError: list index out of range
+WARNING 2021-06-05 10:06:33,528 log 103 140320305547072 Unauthorized: /api/logout/
+INFO 2021-06-05 10:09:36,663 autoreload 100 140190749058880 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:09:37,793 autoreload 110 140508869207872 Watching for file changes with StatReloader
+INFO 2021-06-05 10:09:39,210 autoreload 110 140508869207872 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:09:40,160 autoreload 113 140166108391232 Watching for file changes with StatReloader
+INFO 2021-06-05 10:11:03,511 autoreload 113 140166108391232 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:11:04,802 autoreload 116 140589297592128 Watching for file changes with StatReloader
+INFO 2021-06-05 10:11:07,472 autoreload 116 140589297592128 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:11:08,483 autoreload 119 139738873014080 Watching for file changes with StatReloader
+INFO 2021-06-05 10:11:11,983 autoreload 119 139738873014080 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:11:13,017 autoreload 122 140622554425152 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:11:21,238 log 125 140702271756096 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:11:21,546 log 125 140702271756096 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:11:23,594 log 125 140702271756096 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:11:24,549 log 125 140702271756096 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 435, in get
+    current_max = list_[0]
+IndexError: list index out of range
+WARNING 2021-06-05 10:11:25,089 log 125 140702271756096 Unauthorized: /api/logout/
+INFO 2021-06-05 10:14:21,980 autoreload 122 140622554425152 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:14:23,253 autoreload 133 140474663987008 Watching for file changes with StatReloader
+INFO 2021-06-05 10:14:49,573 autoreload 133 140474663987008 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:14:50,535 autoreload 136 140309377599296 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:15:02,906 log 139 139788715792192 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:15:03,156 log 139 139788715792192 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:15:04,883 log 139 139788715792192 Unauthorized: /api/upload_menu/
+ERROR 2021-06-05 10:15:05,808 log 139 139788715792192 Internal Server Error: /api/results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/src/app/api/views.py", line 435, in get
+    current_max = list_[0]
+IndexError: list index out of range
+WARNING 2021-06-05 10:15:06,333 log 139 139788715792192 Unauthorized: /api/logout/
+INFO 2021-06-05 10:16:18,498 autoreload 136 140309377599296 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:16:19,482 autoreload 146 140276699440960 Watching for file changes with StatReloader
+INFO 2021-06-05 10:16:22,820 autoreload 146 140276699440960 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:16:23,696 autoreload 149 139635575740224 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:16:42,087 log 152 140628598499136 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:16:42,337 log 152 140628598499136 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:16:44,008 log 152 140628598499136 Unauthorized: /api/upload_menu/
+WARNING 2021-06-05 10:16:45,448 log 152 140628598499136 Unauthorized: /api/logout/
+INFO 2021-06-05 10:16:58,525 autoreload 149 139635575740224 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:16:59,595 autoreload 159 140350104696640 Watching for file changes with StatReloader
+INFO 2021-06-05 10:17:06,365 autoreload 159 140350104696640 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:17:07,581 autoreload 162 140264320902976 Watching for file changes with StatReloader
+INFO 2021-06-05 10:17:26,747 autoreload 162 140264320902976 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:17:27,826 autoreload 165 139700588373824 Watching for file changes with StatReloader
+INFO 2021-06-05 10:17:31,574 autoreload 165 139700588373824 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:17:32,652 autoreload 168 140284530374464 Watching for file changes with StatReloader
+INFO 2021-06-05 10:17:38,460 autoreload 168 140284530374464 /usr/src/app/api/views.py changed, reloading.
+INFO 2021-06-05 10:17:39,824 autoreload 171 140702527997760 Watching for file changes with StatReloader
+WARNING 2021-06-05 10:18:10,128 log 174 139809383896896 Unauthorized: /api/create_employee/
+WARNING 2021-06-05 10:18:10,386 log 174 139809383896896 Unauthorized: /api/create_restaurant/
+WARNING 2021-06-05 10:18:13,953 log 174 139809383896896 Unauthorized: /api/upload_menu/
+WARNING 2021-06-05 10:18:15,465 log 174 139809383896896 Unauthorized: /api/logout/
