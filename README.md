@@ -142,6 +142,8 @@ The API has been intergrated with third party services namely:
 
 ## API Endpoints
 
+You can view the full [Postman Collection Here.](https://www.getpostman.com/collections/f11cb32c01901cee1a4c)
+
 Some endpoints require a token for authentication. The API call should have the token in Authorization header.
 
     `{'Authorization': 'Bearer': <token>}`
