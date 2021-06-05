@@ -201,7 +201,7 @@ class UploadMenuAPIView(APIView):
             todays_date = settings.CURRENT_DATE.date()
             menu = Menu.objects.filter(
                 Q(restaurant__id=int(req.get('restaurant')))
-                and Q(created_at__date__iexact=todays_date))
+                and Q(created_at__date=todays_date))
             user = jwt_decode_handler(request.auth).get('username')
 
             if menu.exists():
