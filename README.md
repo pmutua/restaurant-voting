@@ -41,6 +41,7 @@ Uses the default Django development server.
     Test it out at http://localhost:8000. The "app" folder is mounted into the container and your code changes apply automatically.
 
 
+
 ### Production
 
 Uses **gunicorn** and  **nginx**.
@@ -80,7 +81,10 @@ POSTGRES_DB=postgres
 
     `$ docker-compose -f docker-compose.prod.yml up -d --build`
     
+    
     Test it out at http://localhost:1337. No mounted folders. To apply changes, the image must be re-built.
+
+    $ docker-compose -f docker-compose.prod.yml down -v
 
 
 The API has been intergrated with third party services namely:
