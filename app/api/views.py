@@ -334,7 +334,7 @@ class CurrentDayMenuList(APIView):
     def get(self, request):
         todays_date = settings.CURRENT_DATE.date()
 
-        qs = Menu.objects.filter(Q(created_at__date__iexact=todays_date))
+        qs = Menu.objects.filter(Q(created_at__date=todays_date))
         serializer = MenuListSerializer(qs, many=True)
         res = {"msg": 'success', "data": serializer.data, "success": True}
         return Response(data=res, status=status.HTTP_200_OK)
